@@ -74,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		638969231DD4C23600D2B5A6 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				63AD72E11DD381620055F633 /* ViewController.swift */,
+			);
+			name = Controlador;
+			sourceTree = "<group>";
+		};
 		63AD72D31DD381620055F633 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +105,8 @@
 		63AD72DE1DD381620055F633 /* SmartPharma */ = {
 			isa = PBXGroup;
 			children = (
+				638969231DD4C23600D2B5A6 /* Controlador */,
 				63AD72DF1DD381620055F633 /* AppDelegate.swift */,
-				63AD72E11DD381620055F633 /* ViewController.swift */,
 				63AD72E31DD381620055F633 /* Main.storyboard */,
 				63AD72E61DD381620055F633 /* Assets.xcassets */,
 				63AD72E81DD381620055F633 /* LaunchScreen.storyboard */,
@@ -484,6 +492,7 @@
 				63AD73061DD381620055F633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63AD73071DD381620055F633 /* Build configuration list for PBXNativeTarget "SmartPharmaTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				63AD73091DD381620055F633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63AD730A1DD381620055F633 /* Build configuration list for PBXNativeTarget "SmartPharmaUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				63AD730C1DD381620055F633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
