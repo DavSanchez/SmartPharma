@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63A5165A1DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A516591DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift */; };
+		63A5165E1DDA6AB700BAD812 /* InfoHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */; };
+		63A516601DDA6AD800BAD812 /* BuscaFarmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */; };
+		63A516621DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A516611DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift */; };
 		63AD72E01DD381620055F633 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AD72DF1DD381620055F633 /* AppDelegate.swift */; };
-		63AD72E21DD381620055F633 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AD72E11DD381620055F633 /* ViewController.swift */; };
 		63AD72E51DD381620055F633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AD72E31DD381620055F633 /* Main.storyboard */; };
 		63AD72E71DD381620055F633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AD72E61DD381620055F633 /* Assets.xcassets */; };
 		63AD72EA1DD381620055F633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AD72E81DD381620055F633 /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63A516591DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPrincipalCollectionViewController.swift; sourceTree = "<group>"; };
+		63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoHelpViewController.swift; sourceTree = "<group>"; };
+		63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuscaFarmasViewController.swift; sourceTree = "<group>"; };
+		63A516611DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaUsuariosTableViewController.swift; sourceTree = "<group>"; };
 		63AD72DC1DD381620055F633 /* SmartPharma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPharma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AD72DF1DD381620055F633 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63AD72E11DD381620055F633 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63AD72E41DD381620055F633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63AD72E61DD381620055F633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63AD72E91DD381620055F633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +83,10 @@
 		638969231DD4C23600D2B5A6 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
-				63AD72E11DD381620055F633 /* ViewController.swift */,
+				63A516591DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift */,
+				63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */,
+				63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */,
+				63A516611DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -264,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63AD72E21DD381620055F633 /* ViewController.swift in Sources */,
 				63AD72E01DD381620055F633 /* AppDelegate.swift in Sources */,
+				63A516621DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift in Sources */,
+				63A516601DDA6AD800BAD812 /* BuscaFarmasViewController.swift in Sources */,
+				63A5165A1DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift in Sources */,
+				63A5165E1DDA6AB700BAD812 /* InfoHelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pqR-hv-Ra3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4RG-LJ-doq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Menú Principal-->
         <scene sceneID="pCy-MC-fzW">
             <objects>
-                <collectionViewController title="Menú Principal" id="6Lo-Xw-GcU" sceneMemberID="viewController">
+                <collectionViewController title="Menú Principal" id="6Lo-Xw-GcU" customClass="MenuPrincipalCollectionViewController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xiL-5C-d0i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MA7-pX-hm2">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonFarma" id="MA7-pX-hm2">
                                 <rect key="frame" x="0.0" y="64" width="295" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -28,7 +28,11 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8N-AS-FTa">
                                             <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Farmas"/>
+                                            <connections>
+                                                <action selector="botonFarmas:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="xOq-Ya-aVO"/>
+                                                <segue destination="dYA-U3-w4r" kind="show" identifier="muestraBuscaFarmas" id="CFu-CQ-9wh"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buscar Farmacias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utp-a7-YV6">
                                             <rect key="frame" x="79" y="177" width="136" height="21"/>
@@ -41,7 +45,7 @@
                                 </view>
                                 <size key="customSize" width="295" height="231"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="774-Oc-84Y">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonTratamientos" id="774-Oc-84Y">
                                 <rect key="frame" x="305" y="64" width="295" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -50,7 +54,10 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEt-te-i6A">
                                             <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Tratamientos"/>
+                                            <connections>
+                                                <action selector="botonTratamientos:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="tal-EH-3Ov"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tratamientos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-ek-XPq">
                                             <rect key="frame" x="79" y="177" width="136" height="21"/>
@@ -63,7 +70,7 @@
                                 </view>
                                 <size key="customSize" width="295" height="231"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zFf-fB-ljq">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonUsuarios" id="zFf-fB-ljq">
                                 <rect key="frame" x="0.0" y="305" width="295" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -72,7 +79,11 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgz-y3-smd">
                                             <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Usuarios"/>
+                                            <connections>
+                                                <action selector="botonUsuarios:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="hcF-pj-xFj"/>
+                                                <segue destination="Y6W-sI-yPH" kind="show" identifier="muestraVistaUsuarios" id="Bxe-cg-eLa"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuarios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bof-rU-wlo">
                                             <rect key="frame" x="79" y="177" width="136" height="21"/>
@@ -85,7 +96,7 @@
                                 </view>
                                 <size key="customSize" width="295" height="231"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NoC-tH-oxf">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonInfoHelp" id="NoC-tH-oxf">
                                 <rect key="frame" x="305" y="305" width="295" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -94,7 +105,11 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-sC-dL0">
                                             <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="InfoHelp"/>
+                                            <connections>
+                                                <action selector="botonInfoHelp:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="Bzy-9j-q4T"/>
+                                                <segue destination="HKN-uc-vla" kind="show" identifier="muestraInfoAyuda" id="7oq-Kt-B2q"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info y Ayuda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-hI-p9Y">
                                             <rect key="frame" x="79" y="177" width="136" height="21"/>
@@ -113,11 +128,11 @@
                             <outlet property="delegate" destination="6Lo-Xw-GcU" id="g4P-G1-aGy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="SDA-Av-nN0"/>
+                    <navigationItem key="navigationItem" title="SmartPharma" id="SDA-Av-nN0"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kj-SN-Xfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="469"/>
+            <point key="canvasLocation" x="1099" y="-483"/>
         </scene>
         <!--Vista Usuarios-->
         <scene sceneID="EI8-Hd-4oW">
@@ -128,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e4l-bK-c6g">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListaUsuarios" id="e4l-bK-c6g">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e4l-bK-c6g" id="N5i-JI-0Yf">
@@ -146,7 +161,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llB-Rb-Se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="1364"/>
+            <point key="canvasLocation" x="287" y="468"/>
         </scene>
         <!--Info Ayuda-->
         <scene sceneID="Eu2-Sz-Hcx">
@@ -174,12 +189,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzB-yn-oCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3555" y="1364"/>
+            <point key="canvasLocation" x="1939" y="468"/>
         </scene>
         <!--Busca Farmas-->
         <scene sceneID="2pr-xg-vq0">
             <objects>
-                <viewController title="Busca Farmas" id="dYA-U3-w4r" sceneMemberID="viewController">
+                <viewController title="Busca Farmas" id="dYA-U3-w4r" customClass="MapaViewController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vlq-IG-0pg"/>
                         <viewControllerLayoutGuide type="bottom" id="yF7-ap-M8p"/>
@@ -198,79 +213,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPX-nn-hel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969" y="-535"/>
+            <point key="canvasLocation" x="1939" y="-483"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="eUy-zk-m2g">
+        <scene sceneID="EWa-tg-Db7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pqR-hv-Ra3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4RG-LJ-doq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y7e-H0-CED">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wp7-ox-FGs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="6Lo-Xw-GcU" kind="relationship" relationship="rootViewController" id="q8I-Cz-fgk"/>
+                        <segue destination="6Lo-Xw-GcU" kind="relationship" relationship="rootViewController" id="0TG-9Y-SnF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Grh-dr-QkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-Uh-QaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="469"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cZw-z2-4oT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nc5-4f-f9Y" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wOW-AN-tPA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dYA-U3-w4r" kind="relationship" relationship="rootViewController" id="8Ja-D6-TD9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQz-89-UG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="973" y="-535"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="c4p-8V-V8v">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HFC-aa-Lae" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WKm-k6-xQz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HKN-uc-vla" kind="relationship" relationship="rootViewController" id="saH-Eu-Zkd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eYY-b0-9Vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2743" y="1364"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4Jy-ba-VHV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBu-Su-W9J" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3yq-0O-BXT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-sI-yPH" kind="relationship" relationship="rootViewController" id="8se-Oy-RXd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfg-EW-RWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="973" y="1364"/>
+            <point key="canvasLocation" x="287" y="-483"/>
         </scene>
     </scenes>
 </document>
