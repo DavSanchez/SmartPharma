@@ -89,6 +89,7 @@
 				63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */,
 				63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */,
 				63A516611DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift */,
+				63675D101DDCA28E00A511CC /* DetailUsuarioTableViewController.swift */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -119,7 +120,6 @@
 				638969231DD4C23600D2B5A6 /* Controlador */,
 				63AD72DF1DD381620055F633 /* AppDelegate.swift */,
 				63AD72E31DD381620055F633 /* Main.storyboard */,
-				63675D101DDCA28E00A511CC /* DetailUsuarioTableViewController.swift */,
 				63AD72E61DD381620055F633 /* Assets.xcassets */,
 				63AD72E81DD381620055F633 /* LaunchScreen.storyboard */,
 				63AD72EB1DD381620055F633 /* Info.plist */,
