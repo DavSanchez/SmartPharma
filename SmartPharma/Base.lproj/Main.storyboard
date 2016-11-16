@@ -1,153 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4RG-LJ-doq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oKz-fS-dRe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Menú Principal-->
-        <scene sceneID="pCy-MC-fzW">
+        <!--SmartPharma-->
+        <scene sceneID="Wae-sq-obp">
             <objects>
-                <collectionViewController title="Menú Principal" id="6Lo-Xw-GcU" customClass="MenuPrincipalCollectionViewController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xiL-5C-d0i">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController title="SmartPharma" id="LDq-nZ-Haa" customClass="MenuPrincipalController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWK-8o-4oo"/>
+                        <viewControllerLayoutGuide type="bottom" id="H0j-JQ-1gz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PxM-5Y-h5X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8kC-Vz-wfM">
-                            <size key="itemSize" width="295" height="231"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonFarma" id="MA7-pX-hm2">
-                                <rect key="frame" x="0.0" y="64" width="295" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="295" height="231"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8N-AS-FTa">
-                                            <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Farmas"/>
-                                            <connections>
-                                                <action selector="botonFarmas:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="xOq-Ya-aVO"/>
-                                                <segue destination="dYA-U3-w4r" kind="show" identifier="muestraBuscaFarmas" id="CFu-CQ-9wh"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buscar Farmacias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utp-a7-YV6">
-                                            <rect key="frame" x="79" y="177" width="136" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <size key="customSize" width="295" height="231"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonTratamientos" id="774-Oc-84Y">
-                                <rect key="frame" x="305" y="64" width="295" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="295" height="231"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEt-te-i6A">
-                                            <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Tratamientos"/>
-                                            <connections>
-                                                <action selector="botonTratamientos:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="tal-EH-3Ov"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tratamientos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF9-ek-XPq">
-                                            <rect key="frame" x="79" y="177" width="136" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <size key="customSize" width="295" height="231"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonUsuarios" id="zFf-fB-ljq">
-                                <rect key="frame" x="0.0" y="305" width="295" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="295" height="231"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgz-y3-smd">
-                                            <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="Usuarios"/>
-                                            <connections>
-                                                <action selector="botonUsuarios:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="hcF-pj-xFj"/>
-                                                <segue destination="Y6W-sI-yPH" kind="show" identifier="muestraVistaUsuarios" id="Bxe-cg-eLa"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuarios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bof-rU-wlo">
-                                            <rect key="frame" x="79" y="177" width="136" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <size key="customSize" width="295" height="231"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CeldaBotonInfoHelp" id="NoC-tH-oxf">
-                                <rect key="frame" x="305" y="305" width="295" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="295" height="231"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-sC-dL0">
-                                            <rect key="frame" x="102" y="71" width="90" height="90"/>
-                                            <state key="normal" title="InfoHelp"/>
-                                            <connections>
-                                                <action selector="botonInfoHelp:" destination="6Lo-Xw-GcU" eventType="touchUpInside" id="Bzy-9j-q4T"/>
-                                                <segue destination="HKN-uc-vla" kind="show" identifier="muestraInfoAyuda" id="7oq-Kt-B2q"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info y Ayuda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-hI-p9Y">
-                                            <rect key="frame" x="79" y="177" width="136" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <size key="customSize" width="295" height="231"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="6Lo-Xw-GcU" id="ebo-JA-z1X"/>
-                            <outlet property="delegate" destination="6Lo-Xw-GcU" id="g4P-G1-aGy"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="SmartPharma" id="SDA-Av-nN0"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Kj-SN-Xfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1h-vT-xDG">
+                                <rect key="frame" x="52" y="153" width="94" height="94"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="dYA-U3-w4r" kind="show" id="Q17-gw-FJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt3-to-p5o">
+                                <rect key="frame" x="229" y="368" width="94" height="94"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HKN-uc-vla" kind="show" id="j8f-5L-OuT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-Pt-Eem">
+                                <rect key="frame" x="52" y="368" width="94" height="94"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Y6W-sI-yPH" kind="show" id="AQa-0F-3i8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-Us-XwH">
+                                <rect key="frame" x="229" y="153" width="94" height="94"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buscar Farmacias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCC-6b-eJX">
+                                <rect key="frame" x="31" y="255" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuarios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOw-kx-6t8">
+                                <rect key="frame" x="65" y="470" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info y Ayuda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCS-8C-Hae">
+                                <rect key="frame" x="229" y="470" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tratamientos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-gB-Ctr">
+                                <rect key="frame" x="226" y="255" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SmartPharma" id="55c-Ui-yO4"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOK-hQ-3UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="-483"/>
+            <point key="canvasLocation" x="2224" y="-427"/>
         </scene>
         <!--Vista Usuarios-->
         <scene sceneID="EI8-Hd-4oW">
             <objects>
-                <tableViewController title="Vista Usuarios" id="Y6W-sI-yPH" sceneMemberID="viewController">
+                <tableViewController title="Vista Usuarios" id="Y6W-sI-yPH" customClass="VistaUsuariosTableViewController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Uv-lT-zjC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListaUsuarios" id="e4l-bK-c6g">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e4l-bK-c6g" id="N5i-JI-0Yf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -157,22 +101,22 @@
                             <outlet property="delegate" destination="Y6W-sI-yPH" id="xAt-4V-eKK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7bH-Sx-KkB"/>
+                    <navigationItem key="navigationItem" title="Usuarios" id="7bH-Sx-KkB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llB-Rb-Se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="468"/>
+            <point key="canvasLocation" x="1955" y="424"/>
         </scene>
         <!--Info Ayuda-->
         <scene sceneID="Eu2-Sz-Hcx">
             <objects>
-                <viewController title="Info Ayuda" id="HKN-uc-vla" sceneMemberID="viewController">
+                <viewController title="Info Ayuda" id="HKN-uc-vla" customClass="InfoHelpViewController" customModule="SmartPharma" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QE5-jf-VWt"/>
                         <viewControllerLayoutGuide type="bottom" id="ctl-Sy-Jjk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kZB-0B-0uA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lzn-D9-jkM">
@@ -185,11 +129,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fdc-E2-Leu"/>
+                    <navigationItem key="navigationItem" title="Información y Ayuda" id="fdc-E2-Leu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzB-yn-oCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="468"/>
+            <point key="canvasLocation" x="2730" y="424"/>
         </scene>
         <!--Busca Farmas-->
         <scene sceneID="2pr-xg-vq0">
@@ -200,7 +144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yF7-ap-M8p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcQ-Nf-5ak">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="H18-eo-vbB">
@@ -209,29 +153,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9OE-4J-CiV"/>
+                    <navigationItem key="navigationItem" title="Buscar Farmacias" id="9OE-4J-CiV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPX-nn-hel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="-483"/>
+            <point key="canvasLocation" x="2943" y="-427"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="EWa-tg-Db7">
+        <scene sceneID="TfV-Lf-2Py">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4RG-LJ-doq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oKz-fS-dRe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wp7-ox-FGs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3dM-iw-FmH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="6Lo-Xw-GcU" kind="relationship" relationship="rootViewController" id="0TG-9Y-SnF"/>
+                        <segue destination="LDq-nZ-Haa" kind="relationship" relationship="rootViewController" id="rMt-y8-F2p"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-Uh-QaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gy8-sa-g8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="-483"/>
+            <point key="canvasLocation" x="1412" y="-427"/>
         </scene>
     </scenes>
 </document>

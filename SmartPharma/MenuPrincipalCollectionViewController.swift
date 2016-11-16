@@ -8,23 +8,25 @@
 
 import UIKit
 
-class MenuPrincipalCollectionViewController: UICollectionViewController {
+class MenuPrincipalController: UIViewController {
     
-    @IBAction func botonFarmas(sender: UIButton) {
-        self.performSegueWithIdentifier("muestraBuscaFarmas", sender: self)
-    }
     
-    @IBAction func botonTratamientos(sender: UIButton) {
-        // Sin implementar.
-    }
     
-    @IBAction func botonUsuarios(sender: UIButton) {
-        self.performSegueWithIdentifier("muestraVistaUsuarios", sender: self)
-    }
-    
-    @IBAction func botonInfoHelp(sender: UIButton) {
-        self.performSegueWithIdentifier("muestraInfoAyuda", sender: self)
-    }
+//    @IBAction func botonFarmas(sender: UIButton) {
+//        self.performSegueWithIdentifier("muestraBuscaFarmas", sender: self)
+//    }
+//    
+//    @IBAction func botonTratamientos(sender: UIButton) {
+//        // Sin implementar.
+//    }
+//    
+//    @IBAction func botonUsuarios(sender: UIButton) {
+//        self.performSegueWithIdentifier("muestraVistaUsuarios", sender: self)
+//    }
+//    
+//    @IBAction func botonInfoHelp(sender: UIButton) {
+//        self.performSegueWithIdentifier("muestraInfoAyuda", sender: self)
+//    }
     
     
     override func viewDidLoad() {
