@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63675D111DDCA28E00A511CC /* DetailUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63675D101DDCA28E00A511CC /* DetailUsuarioTableViewController.swift */; };
 		63A5165A1DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A516591DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift */; };
 		63A5165E1DDA6AB700BAD812 /* InfoHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */; };
 		63A516601DDA6AD800BAD812 /* BuscaFarmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63675D101DDCA28E00A511CC /* DetailUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		63A516591DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPrincipalCollectionViewController.swift; sourceTree = "<group>"; };
 		63A5165D1DDA6AB700BAD812 /* InfoHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoHelpViewController.swift; sourceTree = "<group>"; };
 		63A5165F1DDA6AD800BAD812 /* BuscaFarmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuscaFarmasViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				638969231DD4C23600D2B5A6 /* Controlador */,
 				63AD72DF1DD381620055F633 /* AppDelegate.swift */,
 				63AD72E31DD381620055F633 /* Main.storyboard */,
+				63675D101DDCA28E00A511CC /* DetailUsuarioTableViewController.swift */,
 				63AD72E61DD381620055F633 /* Assets.xcassets */,
 				63AD72E81DD381620055F633 /* LaunchScreen.storyboard */,
 				63AD72EB1DD381620055F633 /* Info.plist */,
@@ -276,6 +279,7 @@
 				63AD72E01DD381620055F633 /* AppDelegate.swift in Sources */,
 				63A516621DDA6AF400BAD812 /* VistaUsuariosTableViewController.swift in Sources */,
 				63A516601DDA6AD800BAD812 /* BuscaFarmasViewController.swift in Sources */,
+				63675D111DDCA28E00A511CC /* DetailUsuarioTableViewController.swift in Sources */,
 				63A5165A1DDA55B400BAD812 /* MenuPrincipalCollectionViewController.swift in Sources */,
 				63A5165E1DDA6AB700BAD812 /* InfoHelpViewController.swift in Sources */,
 			);
