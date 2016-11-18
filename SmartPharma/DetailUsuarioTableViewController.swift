@@ -9,10 +9,45 @@
 import UIKit
 
 class DetailUsuarioTableViewController: UITableViewController {
+    /*
+     @IBOutlet weak var nombre: UILabel!
+     @IBOutlet weak var dni: UILabel!
+     @IBOutlet weak var direccion: UILabel!
+     @IBOutlet weak var telefono: UILabel!
+    */
+    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var dni: UILabel!
+    @IBOutlet weak var direccion: UILabel!
+    
+    @IBOutlet weak var telefono: UILabel!
+    var datosDeUsuario: DatosDeUsuario? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
+    
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let datos = self.datosDeUsuario{
+            if let nombre = self.nombre {
+                nombre.text = datos.nombre
+            }
+            if let dni = self.dni {
+                dni.text = datos.dni
+            }
+            if let direccion = self.direccion {
+                direccion.text = datos.direccion
+            }
+            if let telefono = self.telefono {
+                telefono.text = datos.telefono
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.configureView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,7 +59,7 @@ class DetailUsuarioTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+/*
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,6 +71,7 @@ class DetailUsuarioTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+ */
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

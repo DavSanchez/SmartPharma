@@ -82,14 +82,21 @@ class VistaUsuariosTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "MuestraDetalleUsuario" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controladorVistaDetalle = (segue.destinationViewController as! UINavigationController).topViewController as! DetailUsuarioTableViewController
+                
+                controladorVistaDetalle.datosDeUsuario = self.controladorDatosDeUsuario.obtenerUsuario(indexPath.row)
+                controladorVistaDetalle.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controladorVistaDetalle.navigationItem.leftItemsSupplementBackButton = true
     }
-    */
+        }
 
 }
