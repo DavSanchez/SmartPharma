@@ -16,11 +16,11 @@ class DatosDeUsuarioController {
         iniciarListaDeUsuarios()
     }
     
-    func numeroDeContactos() -> Int {
+    func numeroDeUsuarios() -> Int {
         return listaDeUsuarios.count
     }
     
-    func obtenerContacto(indice: Int) -> DatosDeUsuario? {
+    func obtenerUsuario(indice: Int) -> DatosDeUsuario? {
         let numElementos = listaDeUsuarios.count
         if (indice < numElementos) {
             return listaDeUsuarios[indice]
