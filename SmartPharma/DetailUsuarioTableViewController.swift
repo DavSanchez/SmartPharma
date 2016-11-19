@@ -9,12 +9,7 @@
 import UIKit
 
 class DetailUsuarioTableViewController: UITableViewController {
-    /*
-     @IBOutlet weak var nombre: UILabel!
-     @IBOutlet weak var dni: UILabel!
-     @IBOutlet weak var direccion: UILabel!
-     @IBOutlet weak var telefono: UILabel!
-     */
+
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var dni: UILabel!
     @IBOutlet weak var direccion: UILabel!
@@ -59,6 +54,7 @@ class DetailUsuarioTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     /*
      // MARK: - Table view data source
      

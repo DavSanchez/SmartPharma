@@ -11,7 +11,6 @@ import UIKit
 class DatosDeUsuario {
     
     var nombre, dni, direccion, telefono : String
-    //var fechaNac : NSDate
     
     //init (nombre: String, dni: String, direccion: String, telefono: String, fechaNac: NSDate){
     init (nombre: String, dni: String, direccion: String, telefono: String){
@@ -19,7 +18,6 @@ class DatosDeUsuario {
         self.dni = dni
         self.direccion = direccion
         self.telefono = telefono
-        //self.fechaNac = fechaNac
     }
     
 }

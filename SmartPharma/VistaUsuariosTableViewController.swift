@@ -16,16 +16,7 @@ class VistaUsuariosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        if let split = self.splitViewController {
-        //            let controllers = split.viewControllers
-        //            self.detailUsuarioTableViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailUsuarioTableViewController
-        //        }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
     
     /*
@@ -111,15 +102,10 @@ class VistaUsuariosTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "MuestraDetalleUsuario" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                /*
-                 let controladorVistaDetalle = (segue.destinationViewController as! UINavigationController).topViewController as! DetailUsuarioTableViewController
-                 */
                 
                 let controladorVistaDetalle = segue.destinationViewController as! DetailUsuarioTableViewController
                 
                 controladorVistaDetalle.datosDeUsuario = self.controladorDatosDeUsuario.obtenerUsuario(indexPath.row)
-                //controladorVistaDetalle.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                //controladorVistaDetalle.navigationItem.leftItemsSupplementBackButton = true
             }
         }
         
